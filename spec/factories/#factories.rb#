@@ -1,0 +1,7 @@
+FactoryGirl.define do
+
+  factory :flight do
+    destination      fAKER'San Francisco'
+  end
+
+end

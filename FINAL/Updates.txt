@@ -1,0 +1,89 @@
+Updates TouchM Premium HTML5 Multipurpose Responsive
+
+20.10.2014 
+
+Tiwtter Update
+
+How to:
+
+1. Copy Twitter Folder to the root of your theme
+2. Remove the twitter call out from the head of your pages and replace it with the new one
+	- Old: <script type="text/javascript" src="javascripts/jquery.jtweetsanywhere-1.3.1.min.js"></script>
+	- NEW: <script src="twitter/jquery.tweet.js" type="text/javascript"></script>
+3. Remove the css in style1.css at the bottom and replace it with the new one
+4. Replace app-head.js in javascripts folder with the new one. If you made changes to that file just replace the twitter call out.
+5. In the footer where you have the div that holds the twitter 
+<div id="tweetFeed"> </div> replace it with <div class="twitterfeed"></div>
+
+All the files have now changed...you just need to configure your twitter script now
+1. Go to app-head in javascript folder and replace the username and your website
+2. Open index.php in the twitter folder and replace the info for App Consumer Key, App Consumer Secret, App Access Token and  App Access Token Secret with the ones that you get when you create your app on twitter at this page: https://apps.twitter.com/
+
+Hope this is clear.
+
+Cheers
+
+
+
+
+------------------------------------------------------------
+
+11.24.2012 – Version 1.4.1 – Main Menu IE8 Fix
+
+	- Tutorial here to see the changes: http://forums.forgrafx.com/viewtopic.php?f=7&t=22
+
+11.20.2012 – Version 1.4 – New Functional Twitter Widget
+
+	 - (Modified File: /javascripts/jquery.jtweetsanywhere-1.3.1.min.js - new file just add it in your head)
+
+	 - (Modified File: /stylesheets/style1.css - styling added for the twitter widget at the bottom of the file - just copy this lines to your css if you don't wanna overwrite your changes)
+
+	 - all the HTML pages have the twitter replaced ( 
+
+	Replace : 
+
+	<ul class="footer-list twitter">
+  	  <li></li>   
+	</ul>
+
+	With:
+
+	<div id="tweetFeed"> </div>
+
+
+)
+
+
+11.18.2012 – Version 1.3.3 – New Page - Portfolio with sidebar
+
+	(Modified File: /javascripts/jquery.offcanvas.js - new file just add it in your head if you wanna use off-canvas for mobile)
+
+	(Modified File: /stylesheets/style1.css  search for /* Filter List -Sidebar */ and add them to your css)
+
+	(Modified File: /stylesheets/offcanvas.css  new file just add it in the head of you page if you wanna use off-canvas for mobile )
+
+11.13.2012 – Version 1.3.1 – Registration Page Added
+
+11.11.2012 – Version 1.3 – Boxed Version Added
+
+11.09.2012 – Version 1.2.1 – Animation Fixed
+
+	(Modified File: /javascripts/app-head.js)
+
+	(Modified File: /stylesheets/style1.css)
+
+11.08.2012 – Version 1.2 – New animation added for the main navigation.
+
+	(Modified File: /javascripts/app-head.js)
+
+	(Modified File: /stylesheets/style1.css)
+
+11.07.2012 – Version 1.1 –
+
+    - Titan Lightbox – Touch Swipe Support added
+
+	(Modified File: /plugins/titan/js/jquery.titanlighbox.js)
+
+    - Pricing tables fixed
+	
+	(Modified File: /stylesheets/style1.css)
