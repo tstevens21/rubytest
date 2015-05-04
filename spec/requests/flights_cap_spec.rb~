@@ -1,0 +1,10 @@
+require 'spec_helper'
+
+describe 'Flights' do
+  describe "Get /flights" do
+   it "displays flights" do
+     visit flights_path
+     expect(page).to include("Las Vegas)
+   end
+  end
+end

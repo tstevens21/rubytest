@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.1">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      ...
+    </TestPlan>
+  </hashTree>
+</jmeterTestPlan>
+
+test do
+  threads count: 10 do
+    visit name: 'Google Search', url: 'http://google.com'
+  end
+end

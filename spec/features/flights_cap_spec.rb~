@@ -1,0 +1,12 @@
+require 'spec_helper'
+require 'capybara'
+
+describe 'Flights' do
+  describe "Get /flights" do
+     it 'Gets the flights'
+       session = Capybara::Session.new(:selenium)
+       session.visit("http://localhost:3000/flights")
+       expect(page).to include("Las Vegas")
+     end
+  end
+end

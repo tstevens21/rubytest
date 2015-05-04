@@ -12,7 +12,7 @@ RSpec.describe FlightsController, type: :controller  do
      
      get :index, :format => :json
      
-     puts "Body = " + response.body
+     ##puts "Body = " + response.body
      expect(response.body).to include('Portland')
    end
 
@@ -27,7 +27,7 @@ RSpec.describe FlightsController, type: :controller  do
     redirect_to(response.headers['Location'])
 
     get :index, :format => :json
-    puts "Body = " + response.body
+    ##puts "Body = " + response.body
     
     expect(response.body).to include("San Francisco")
     puts 'Flight count is ' + Flight.count.to_s
@@ -43,7 +43,7 @@ RSpec.describe FlightsController, type: :controller  do
     redirect_to(response.headers['Location'])
 
     get :index, :format => :json
-    puts "Body = " + response.body
+    ##puts "Body = " + response.body
     expect(response.body).to include('Seattle')
     puts 'Flight count is ' + Flight.count.to_s
     
