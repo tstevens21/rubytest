@@ -9,6 +9,11 @@ feature 'Get Flights' do
     click_button 'Create Flight'
   end
 
+  scenario  'Get Flights' do
+        visit ('http://localhost:3000/flights')
+        expect(page).to have_content 'Orlando'
+  end
+
   scenario 'User creates new flight' do
     visit ('http://localhost:3000/flights/new')
     fill_in :Destination, with: 'Dallas'
@@ -18,16 +23,19 @@ feature 'Get Flights' do
     expect(page).to have_content 'Orlando'
   end
 
-    
-  scenario  'Get Flights' do
+  scenario 'User updates Orlando Flight to Portland' do
+      visit ('http://localhost:3000/flights/1/edit')
+      fill_in :Destination, with: 'Portland'
+      click_button 'Update Flight'
+      visit ('http://localhost:3000/flights')
+      expect(page).to have_content 'Portland'  
+  end
 
-       # session = Capybara::Session.new(:webkit)
-        visit ('http://localhost:3000/flights')
-        #save_and_open_page
-        ##fill_in :username, with: 'johndoe'
-        ##click_button 'Sign in'
-        ##puts page.body.to_s
-        expect(page).to have_content 'Orlando'
+  scenario 'User deletes Orlando flight' do
+      visit ('http://localhost:3000/flights')
+      find(:xpath, "(//a[@href='/flights/1'])[2]").click
+      visit ('http://localhost:3000/flights')
+      expect(page).to_not have_content('Orlando')      
   end
 
   end
