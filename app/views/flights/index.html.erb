@@ -24,8 +24,7 @@
         <td><%= flight.capacity %></td>
         <td><%= link_to 'Show', flight %></td>
         <td><%= link_to 'Edit', edit_flight_path(flight) %></td>
-        <td><%= link_to 'Destroy', flight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td><%= button_to "delete", flight, :method=>:delete, :class=>:destroy %></td>
     <% end %>
   </tbody>
 </table>
