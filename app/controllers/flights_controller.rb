@@ -40,6 +40,7 @@ class FlightsController < ApplicationController
   # PATCH/PUT /flights/1
   # PATCH/PUT /flights/1.json
   def update
+    puts 'update - flight is ' + flight_params['destination'].to_s
     respond_to do |format|
       if @flight.update(flight_params)
         format.html { redirect_to @flight, notice: 'Flight was successfully updated.' }
