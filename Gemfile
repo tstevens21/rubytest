@@ -30,6 +30,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'launchy'
   gem 'guard-rspec'
+  gem 'ruby-jmeter'
 end
 
   
