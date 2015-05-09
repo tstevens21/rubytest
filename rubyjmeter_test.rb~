@@ -1,0 +1,9 @@
+require 'ruby-jmeter'
+
+test do
+  with_json
+  threads 1, loops: 5 do
+    get name: 'get flights',
+        url: 'http://localhost:3000/flights'
+  end
+end.run
